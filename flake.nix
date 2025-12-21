@@ -15,9 +15,9 @@
         modules = [ ./home.nix ];
       };
       
-      "chleese@mac" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [ ./home.nix ];
+      "chleese_mac" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-darwin;
+        modules = [ ./home_mac.nix ];
       };
     };
   };
