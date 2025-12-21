@@ -33,9 +33,15 @@
   };
 
 
-  home.shellAliases = {
+  programs.zsh = {
+    enable = true;  	
+ 
+    shellAliases = {
   	mi = "micro";
   	hms = "home-manager switch --flake ~/.nix#chleese_mac";
+  	whs = "wormhole send";
+  	whr = "wormhole receive";
+    };
   };
   
   programs.home-manager.enable = true;
