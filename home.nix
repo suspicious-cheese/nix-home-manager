@@ -8,7 +8,13 @@
     micro
     bat
     kdePackages.kmines
+    yazi
   ];
+
+  programs.yazi = {
+  	enable = true;
+  	enableZshIntegration = true;
+  };
 
   programs.bat = {
     enable = true;
@@ -42,12 +48,22 @@
   	    fi
   	  '';
 
+  	sessionVariables = {
+  	    EDITOR = "micro";
+  	    VISUAL = "micro";
+  	  };
+
   	shellAliases = {
   		mi = "micro";
 		hms = "home-manager switch --flake ~/.nix#chleese";
 	    whs = "wormhole send";
 	    whr = "wormhole receive";
   	};
+  };
+
+  home.sessionVariables = {
+  	EDITOR = "micro";
+  	VISUAL = "micro";
   };
 
   
