@@ -17,7 +17,7 @@
       
       "chleese_mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-darwin;
-        modules = [ ./home_mac.nix ];
+        modules = [ ./home-mac.nix ];
       };
     };
   };
