@@ -7,13 +7,17 @@
     hello
     micro
     bat
+    yazi
   ];
 
-  programs.bat = {
+  programs.yazi = {
     enable = true;
-  	config = {
-  	  theme = "Catppuccin Mocha";
+  	enableZshIntegration = true;
   	};
+
+  home.sessionVariables = {
+    EDITOR = "micro";
+    VISUAL = "micro";
   };
 
   programs.micro = {
@@ -43,6 +47,12 @@
   	whr = "wormhole receive";
     };
   };
+
+  xdg.configFile."yazi/theme.toml".source = pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-blue.toml";
+    sha256 = "sha256-g6tFCzjd97Y3TpDYgP5OPwqkHIqzxk9JHAPfe7ffVec=";
+  };
+
   
   programs.home-manager.enable = true;
 }
