@@ -62,15 +62,11 @@
     
   };
 
-  home.sessionVariables = {
-  	EDITOR = "micro";
-  	VISUAL = "micro";
-  };
 
   programs.btop = {
   	enable = true;
   	settings = {
-  		color_theme = "catppuccin-mocha"
+  		color_theme = "catppuccin-mocha";
   	};
   	themes = {
   	  		catppuccin-mocha = ''
