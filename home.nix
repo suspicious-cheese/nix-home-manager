@@ -11,6 +11,7 @@
     yazi
     btop
     neofetch
+    delta
   ];
 
 
@@ -43,6 +44,11 @@
       };
     };
 
+  xdg.configFile."yazi/theme.toml".source = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-blue.toml";
+      sha256 = "sha256-g6tFCzjd97Y3TpDYgP5OPwqkHIqzxk9JHAPfe7ffVec=";
+    };
+
   programs.zsh = {
   	enable = true;
 
@@ -65,8 +71,8 @@
 		enable = true;
 		theme = "af-magic";
 
-	
   	};
+  	
   };
 
   home.sessionVariables = {
