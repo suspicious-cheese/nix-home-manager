@@ -10,6 +10,7 @@
     kdePackages.kmines
     yazi
     btop
+    neofetch
   ];
 
 
@@ -36,19 +37,14 @@
 
 
   xdg.configFile."micro/colorschemes/catppuccin-mocha.micro" = {
-    source = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/catppuccin/micro/main/themes/catppuccin-mocha.micro";
-      sha256 = "sha256-pWO6m6w+5AsUXqJxTwHPG5puZ8PE+7JE7KcbXk8caDs=";
+      source = pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/catppuccin/micro/main/themes/catppuccin-mocha.micro";
+        sha256 = "sha256-pWO6m6w+5AsUXqJxTwHPG5puZ8PE+7JE7KcbXk8caDs=";
+      };
     };
-  };
 
-  programs.bash = {
+  programs.zsh = {
   	enable = true;
-  	bashrcExtra = ''
-  	    if [ -f ~/.bashrc.local ]; then
-  	      source ~/.bashrc.local
-  	    fi
-  	  '';
 
   	sessionVariables = {
   	    EDITOR = "micro";
@@ -60,6 +56,16 @@
 		hms = "home-manager switch --flake ~/.nix#chleese";
 	    whs = "wormhole send";
 	    whr = "wormhole receive";
+	    ls = "ls --color=auto";
+	    la = "ls -a --color=auto";
+
+	};
+
+	oh-my-zsh = {
+		enable = true;
+		theme = "af-magic";
+
+	
   	};
   };
 
