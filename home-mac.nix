@@ -18,6 +18,13 @@
   	enableZshIntegration = true;
   	};
 
+  programs.bat = {
+  	enable = true;
+  	config = {
+  		theme = "Catppuccin Mocha";
+  	};
+  };
+
   home.sessionVariables = {
     EDITOR = "micro";
     VISUAL = "micro";
