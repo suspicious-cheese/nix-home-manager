@@ -67,6 +67,7 @@
   	hms = "home-manager switch --flake ~/.nix#chleese_mac";
   	whs = "wormhole send";
   	whr = "wormhole receive";
+  	la = "ls -aG";
     };
 
 	oh-my-zsh = {
