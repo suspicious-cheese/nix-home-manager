@@ -11,11 +11,18 @@
     btop
     neofetch
     delta
+    w3m
   ];
 
   programs.yazi = {
     enable = true;
   	enableZshIntegration = true;
+
+  	settings  = {
+  	  preview = {
+  		wrap = "yes";
+  		};
+  	  };
   	};
 
   programs.bat = {
