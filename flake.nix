@@ -22,7 +22,7 @@
 
       "chleese-mac-sil" = home-manager.lib.homeManagerConfiguration {
       	pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-      	modules = [ ./home-mac-sil];
+      	modules = [ ./home-mac-sil.nix];
       };
     };
   };
