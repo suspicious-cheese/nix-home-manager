@@ -64,10 +64,11 @@
  
     shellAliases = {
   	mi = "micro";
-  	hms = "home-manager switch --flake ~/.nix#chleese_mac";
+  	hms = "home-manager switch --flake ~/.nix#chleese_mac-sil";
   	whs = "wormhole send";
   	whr = "wormhole receive";
   	la = "ls -aG";
+  	w2m = "w3m duckduckgo.com";
     };
 
 	oh-my-zsh = {
