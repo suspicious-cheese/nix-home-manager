@@ -64,7 +64,7 @@
  
     shellAliases = {
   	mi = "micro";
-  	hms = "home-manager switch --flake ~/.nix#chleese_mac-sil";
+  	hms = "home-manager switch --flake ~/.nix#chleese-mac-sil";
   	whs = "wormhole send";
   	whr = "wormhole receive";
   	la = "ls -aG";
