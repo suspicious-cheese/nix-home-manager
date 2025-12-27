@@ -65,7 +65,7 @@
 
   	shellAliases = {
   		mi = "micro";
-		hms = "home-manager switch --flake ~/.nix#chleese";
+		hms = "home-manager switch --flake ~/.nix#chleese-linux";
 	    whs = "wormhole send";
 	    whr = "wormhole receive";
 	    ls = "ls --color=auto";

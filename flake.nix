@@ -10,12 +10,12 @@
   
   outputs = { nixpkgs, home-manager, ... }: {
     homeConfigurations = {
-      "chleese" = home-manager.lib.homeManagerConfiguration {
+      "chleese-linux" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        modules = [ ./home.nix ];
+        modules = [ ./home-linux.nix ];
       };
       
-      "chleese_mac" = home-manager.lib.homeManagerConfiguration {
+      "chleese-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-darwin;
         modules = [ ./home-mac.nix ];
       };
