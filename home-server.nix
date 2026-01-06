@@ -64,7 +64,7 @@
 
   	shellAliases = {
   		mi = "micro";
-		hms = "home-manager switch --flake ~/.nix/nix-home-manager#chleese-linux";
+		hms = "home-manager switch --flake ~/.nix/nix-home-manager#chleese-server";
 		nxs = "sudo nixos-rebuild switch --flake ~/.nix#home-server";
 	    whs = "wormhole send";
 	    whr = "wormhole receive";
