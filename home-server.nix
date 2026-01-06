@@ -51,7 +51,7 @@
 
   xdg.configFile."yazi/theme.toml".source = pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-blue.toml";
-      sha256 = "sha256-g6tFCzjd97Y3TpDYgP5OPwqkHIqzxk9JHAPfe7ffVec=";
+      sha256 = "sha256-BIVElhuBLwAtECT97j0FqSGKiRRjHWy4tinZF9NvBfY=";
     };
 
   programs.zsh = {
@@ -65,7 +65,7 @@
   	shellAliases = {
   		mi = "micro";
 		hms = "home-manager switch --flake ~/.nix/nix-home-manager#chleese-linux";
-		nxs = "sudo nixos-rebuild switch --flake ~/.nix#home-server"
+		nxs = "sudo nixos-rebuild switch --flake ~/.nix#home-server";
 	    whs = "wormhole send";
 	    whr = "wormhole receive";
 	    ls = "ls --color=auto";
