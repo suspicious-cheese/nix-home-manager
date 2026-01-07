@@ -68,6 +68,7 @@
   	whs = "wormhole send";
   	whr = "wormhole receive";
   	la = "ls -aG";
+  	la = "ls -a --color=auto";
   	w2m = "w3m duckduckgo.com";
     };
 

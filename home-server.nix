@@ -70,7 +70,7 @@
 	    whr = "wormhole receive";
 	    ls = "ls --color=auto";
 	    la = "ls -a --color=auto";
-
+	    w2m = "w3m duckduckgo.com";
 	};
 
 	oh-my-zsh = {
