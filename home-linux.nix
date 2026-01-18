@@ -41,6 +41,11 @@
   	};
   };
 
+  programs.fzf = {
+  	enable = true;
+  	enableZshIntegration = true;
+  };
+
 
 
   xdg.configFile."micro/colorschemes/catppuccin-mocha.micro" = {
