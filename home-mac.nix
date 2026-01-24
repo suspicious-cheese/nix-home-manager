@@ -94,6 +94,10 @@
 		enable = true;
 		theme = "af-magic";
 	};
+
+	syntaxHighlighting = {
+		enable = true;
+	};
     
   };
 
