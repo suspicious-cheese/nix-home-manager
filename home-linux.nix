@@ -64,13 +64,6 @@
   	};
   };
 
-  programs.fzf = {
-  	enable = true;
-  	enableZshIntegration = true;
-  };
-
-
-
   xdg.configFile."micro/colorschemes/catppuccin-mocha.micro" = {
       source = pkgs.fetchurl {
         url = "https://raw.githubusercontent.com/catppuccin/micro/main/themes/catppuccin-mocha.micro";
