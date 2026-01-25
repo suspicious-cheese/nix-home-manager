@@ -97,7 +97,10 @@
 	oh-my-zsh = {
 		enable = true;
 		theme = "af-magic";
+  	};
 
+  	syntaxHighlighting = {
+  		enable = true;
   	};
   	
   };
