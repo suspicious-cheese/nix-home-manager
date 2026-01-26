@@ -12,6 +12,7 @@
     neofetch
     delta
     w3m
+    pipenv
   ];
 
 
@@ -104,6 +105,8 @@
   	syntaxHighlighting = {
   		enable = true;
   	};
+
+  	autosuggestion.enable = true;
   	
   };
 

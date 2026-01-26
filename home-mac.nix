@@ -12,6 +12,7 @@
     neofetch
     delta
     w3m
+    pipenv
   ];
 
   programs.yazi = {
@@ -98,6 +99,8 @@
 	syntaxHighlighting = {
 		enable = true;
 	};
+
+	autosuggestion.enable = true;
     
   };
 
