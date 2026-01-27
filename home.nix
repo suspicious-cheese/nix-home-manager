@@ -1,7 +1,5 @@
 { config, pkgs, lib, ... }:
 {
-  #home.username = "chleese";
-  #home.homeDirectory = "/home/chleese";
   home.stateVersion = "24.11";
 
   home.packages =
@@ -10,7 +8,6 @@
       hello
       micro
       bat
-      #kdePackages.kmines
       yazi
       btop
       neofetch
@@ -92,16 +89,15 @@
 
     shellAliases = {
       mi = "micro";
-      #hms = "home-manager switch --flake ~/.nix#chleese-linux";
       whs = "wormhole send";
       whr = "wormhole receive";
       ls = "ls --color=auto";
       la = "ls -a --color=auto";
       w2m = "w3m duckduckgo.com";
-    } #// lib.optionalAttrs (pkgs.stdenv.hostPlatform.system == "aarch64-darwin") { hms = "home-manager switch --flake ~/.nix#chleese-mac-sil";  }
+    }
     // lib.optionalAttrs (config.home.username == "chleese") { hms = "home-manager switch --flake ~/.nix#chleese-linux"; }
     // lib.optionalAttrs (config.home.username == "klaasvanloon") { hms = "home-manager switch --flake ~/.nix#chleese-mac";  }
-    // lib.optionalAttrs (config.home.username == "klaas") { hms = "home-manager switch --flake ~/nix-home-manager#chleese-mac-sil";  }
+    // lib.optionalAttrs (config.home.username == "klaas") { hms = "home-manager switch --flake ~/.nix#chleese-mac-sil";  }
     // lib.optionalAttrs (config.home.username == "homeserver") { hms = "home-manager switch --flake ~/.nix#chleese-server";  };
     
 
