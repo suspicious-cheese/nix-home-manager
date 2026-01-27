@@ -12,17 +12,24 @@
     homeConfigurations = {
       "chleese-linux" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        modules = [ ./home-linux.nix 
-		{ 
-		home.username = "chleese";
-		home.homeDirectory = "/home/chleese";
-		}
+        modules = [
+        	./home.nix
+			{ 
+				home.username = "chleese";
+				home.homeDirectory = "/home/chleese";
+			}
         ];
       };
       
       "chleese-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-darwin;
-        modules = [ ./home-mac.nix ];
+        modules = [
+        	./home.nix
+			{
+				home.username = "klaasvanloon";
+				home.homeDirectory = "/Users/klaasvanloon";
+			}
+        ];
       };
 
       "chleese-mac-sil" = home-manager.lib.homeManagerConfiguration {
