@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   #home.username = "chleese";
   #home.homeDirectory = "/home/chleese";
@@ -18,7 +18,7 @@
       w3m
       pipenv
       rustup
-      nixfmt-rfc-style
+      nixfmt
     ]
     ++ lib.optionals stdenv.hostPlatform.isLinux [ kdePackages.kmines ];
 
@@ -92,13 +92,18 @@
 
     shellAliases = {
       mi = "micro";
-      hms = "home-manager switch --flake ~/.nix#chleese-linux";
+      #hms = "home-manager switch --flake ~/.nix#chleese-linux";
       whs = "wormhole send";
       whr = "wormhole receive";
       ls = "ls --color=auto";
       la = "ls -a --color=auto";
       w2m = "w3m duckduckgo.com";
-    };
+    } #// lib.optionalAttrs (pkgs.stdenv.hostPlatform.system == "aarch64-darwin") { hms = "home-manager switch --flake ~/.nix#chleese-mac-sil";  }
+    // lib.optionalAttrs (config.home.username == "chleese") { hms = "home-manager switch --flake ~/.nix#chleese-linux"; }
+    // lib.optionalAttrs (config.home.username == "klaasvanloon") { hms = "home-manager switch --flake ~/.nix#chleese-mac";  }
+    // lib.optionalAttrs (config.home.username == "klaas") { hms = "home-manager switch --flake ~/nix-home-manager#chleese-mac-sil";  }
+    // lib.optionalAttrs (config.home.username == "homeserver") { hms = "home-manager switch --flake ~/.nix#chleese-server";  };
+    
 
     oh-my-zsh = {
       enable = true;
