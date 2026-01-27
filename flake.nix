@@ -34,11 +34,24 @@
 
       "chleese-mac-sil" = home-manager.lib.homeManagerConfiguration {
       	pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-      	modules = [ ./home-mac-sil.nix];
+      	modules = [
+      		./home.nix
+      		{
+      			home.username = "klaas";
+      			home.homeDirectory = "/Users/klaas";
+      		}
+      	];
+      	
       };
       "chleese-server" = home-manager.lib.homeManagerConfiguration {
       	pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      	modules = [ ./home-server.nix ];
+      	modules = [
+      		./home.nix
+      		{
+      			home.username = "homeserver";
+      			home.homeDirectory = "/home/homeserver";
+      		}
+      	];
       };
     };
   };
