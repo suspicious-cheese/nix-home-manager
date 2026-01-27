@@ -1,20 +1,21 @@
 { config, pkgs, ... }: {
-  home.username = "chleese";
-  home.homeDirectory = "/home/chleese";
+  #home.username = "chleese";
+  #home.homeDirectory = "/home/chleese";
   home.stateVersion = "24.11";
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs; [ 
     hello
     micro
     bat
-    kdePackages.kmines
+    #kdePackages.kmines
     yazi
     btop
     neofetch
     delta
     w3m
     pipenv
-  ];
+    rustup
+  ] ++ lib.optionals stdenv.hostPlatform.isLinux [ kdePackages.kmines ];
 
 
   programs.yazi = {
