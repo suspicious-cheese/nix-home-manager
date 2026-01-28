@@ -10,7 +10,7 @@
       bat
       yazi
       btop
-      neofetch
+      fastfetch
       delta
       w3m
       pipenv
