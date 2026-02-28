@@ -18,7 +18,7 @@
       rustup
       nixfmt
     ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ kdePackages.kmines ];
+    ++ lib.optional (config.home.username == "chleese") { kdePackages.kmines }
 
   programs.yazi = {
     enable = true;
@@ -77,7 +77,7 @@
 
   xdg.configFile."yazi/theme.toml".source = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-blue.toml";
-    sha256 = "sha256-g6tFCzjd97Y3TpDYgP5OPwqkHIqzxk9JHAPfe7ffVec=";
+    sha256 = "sha256-BIVElhuBLwAtECT97j0FqSGKiRRjHWy4tinZF9NvBfY=";
   };
 
   programs.zsh = {
