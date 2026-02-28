@@ -17,6 +17,7 @@
       pipenv
       rustup
       nixfmt
+      nodejs_24
     ]
     ++ lib.optional (config.home.username == "chleese") [ kdePackages.kmines ];
 
