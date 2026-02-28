@@ -18,8 +18,9 @@
       rustup
       nixfmt
       nodejs_24
-    ]
-    ++ lib.optional (config.home.username == "chleese") [ kdePackages.kmines ];
+      rsync
+    ];
+    #++ lib.optional (config.home.username == "chleese") [ kdePackages.kmines ];
 
   programs.yazi = {
     enable = true;
