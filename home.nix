@@ -96,7 +96,7 @@
       la = "ls -a --color=auto";
       w2m = "w3m duckduckgo.com";
     }
-    // lib.optionalAttrs (config.home.username == "chleese") { hms = "home-manager switch --flake ~/.nix#chleese-linux"; }
+    // lib.optionalAttrs (config.home.username == "chleese") { hms = "home-manager switch --flake ~/.nix-home-manager#chleese-linux"; }
     // lib.optionalAttrs (config.home.username == "klaasvanloon") { hms = "home-manager switch --flake ~/.nix#chleese-mac";  }
     // lib.optionalAttrs (config.home.username == "klaas") { hms = "home-manager switch --flake ~/.nix#chleese-mac-sil";  }
     // lib.optionalAttrs (config.home.username == "homeserver") { hms = "home-manager switch --flake ~/.nix#chleese-server";  };
