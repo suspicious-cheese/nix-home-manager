@@ -19,8 +19,9 @@
       nixfmt
       nodejs_24
       rsync
-    ];
-    #++ lib.optional (config.home.username == "chleese") [ kdePackages.kmines ];
+    ]
+    ++ lib.optionals (config.home.username == "chleese") [ kdePackages.kmines ];
+    #++ lib.optionals(config.home.username == "homeserver") []
 
   programs.yazi = {
     enable = true;
