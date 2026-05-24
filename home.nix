@@ -19,6 +19,7 @@
       nixfmt
       nodejs_24
       rsync
+      opencode
     ]
     ++ lib.optionals (config.home.username == "chleese") [ kdePackages.kmines ];
     #++ lib.optionals(config.home.username == "homeserver") []
